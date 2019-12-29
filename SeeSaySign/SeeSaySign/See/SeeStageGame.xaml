@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SeeSaySign.Controls;assembly=SeeSaySign"
+             x:Class="SeeSaySign.See.SeeStageGame">
+    <ContentPage.Content>
+        <!--<ScrollView BackgroundColor="{StaticResource BgColor}">-->
+        <StackLayout BackgroundColor="{StaticResource BgColor}">
+            <Label Style="{DynamicResource TitleLabel}"
+                   x:Name="TitleLabel"
+                   FontSize="20"
+            />
+            <Grid x:Name="ScoreGrid" HorizontalOptions="Center"
+                  Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image HeightRequest="50" x:Name="CorrectScoreImage" Grid.Column="0"/>
+                <Label FontSize="30" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="CorrectScoreLabel" Grid.Column="1">0</Label>
+                <Image HeightRequest="50" x:Name="WrongScoreImage" Grid.Column="3"/>
+                <Label FontSize="30" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Margin="0,0,0,0" x:Name="WrongScoreLabel" Grid.Column="4" >0</Label>
+            </Grid>
+            <Grid VerticalOptions="CenterAndExpand"
+                  Margin="0"
+                  x:Name="PictureGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                    <ColumnDefinition Width="33*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Row="0" Grid.Column="0" 
+                             x:Name="Image1"
+                             Style="{StaticResource SeeStage2Button}"/>
+                <ImageButton Grid.Row="0" Grid.Column="1" 
+                             Style="{StaticResource SeeStage2Button}"
+                             x:Name="Image2" />
+                <ImageButton Grid.Row="0" Grid.Column="2" 
+                             x:Name="Image3" 
+                             Style="{StaticResource SeeStage2Button}"/>
+            </Grid>
+            <Grid x:Name="InstructionsGrid" HorizontalOptions="Center"
+                  Margin="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton  x:Name="Speaker" 
+                              Grid.Column="0"
+                              BackgroundColor="{StaticResource BgColor}"
+                              Margin="0,0,0,0"
+                              HeightRequest="50"
+                              Clicked="SpeakButton_OnClicked"
+                              Source="{controls:ImageResource SeeSaySign.Images.speakerClearBackground.png}"/>
+                <Label Style="{DynamicResource DirectionLabel}"
+                       x:Name="Directions"
+                       Grid.Column="1"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="FillAndExpand"
+                       Margin="0,0,0,0"
+                       FontSize="20"
+                />
+            </Grid>
+            <!--<StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <ImageButton  x:Name="Speaker" 
+                              HorizontalOptions="End"
+                              BackgroundColor="{StaticResource BgColor}"
+                              Margin="25,25,25,25"
+                              HeightRequest="50"
+                              Clicked="SpeakButton_OnClicked"
+                              Source="{controls:ImageResource SeeSaySign.Images.speakerClearBackground.png}"/>
+                <Label Style="{DynamicResource DirectionLabel}"
+                       x:Name="Directions"
+                       HorizontalOptions="Center"
+                       VerticalOptions="EndAndExpand"
+                       Margin="5, 25, 75, 25"
+                />
+            </StackLayout>-->
+            <!--<Button Style="{StaticResource FirstButton}"
+                    x:Name="SpeakButton"
+                    Text="Speak!"
+                    Clicked="SpeakButton_OnClicked"
+            />-->
+        </StackLayout>
+        <!--</ScrollView>-->
+    </ContentPage.Content>
+</ContentPage>

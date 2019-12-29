@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SeeSaySign.Controls;assembly=SeeSaySign"
+             x:Class="SeeSaySign.See.SeeStage1">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                    <StackLayout BackgroundColor="{StaticResource BgColor}">
+            <Label Style="{DynamicResource TitleLabel}"
+                   Text="TOUCH"
+                   FontSize="20"
+            />
+            <Label TextColor="{StaticResource LTPurple}"
+                   x:Name="WordLabel"
+                   FontAttributes="Bold"
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="End"
+                   Margin ="5,20,5,30"
+                   Text="{Binding Name}"
+            />
+                <ImageButton x:Name="TouchImage"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HeightRequest="400"
+                   WidthRequest="500"
+                   Margin="5"
+                   BackgroundColor="{StaticResource BgColor}"
+                   Source="{Binding ImageUrl, Mode=OneWay, Converter={StaticResource irConverter}}"
+                   Clicked="TouchImage_OnClicked"
+                   CommandParameter="{Binding Name}"
+                />
+        </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

@@ -1,0 +1,127 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\apple.jpg" />
+    <None Remove="Images\baby.jpg" />
+    <None Remove="Images\ball.jpg" />
+    <None Remove="Images\bath.jpg" />
+    <None Remove="Images\bed.jpg" />
+    <None Remove="Images\book.jpg" />
+    <None Remove="Images\bubbles.jpg" />
+    <None Remove="Images\car.jpeg" />
+    <None Remove="Images\car.jpg" />
+    <None Remove="Images\cat.jpg" />
+    <None Remove="Images\climb.jpg" />
+    <None Remove="Images\cookie.jpg" />
+    <None Remove="Images\dog.jpg" />
+    <None Remove="Images\eat.jpg" />
+    <None Remove="Images\juice.jpg" />
+    <None Remove="Images\jump.jpg" />
+    <None Remove="Images\milk.jpg" />
+    <None Remove="Images\run.jpg" />
+    <None Remove="Images\SeeSaySignMonkey.PNG" />
+    <None Remove="Images\shoe.jpg" />
+    <None Remove="Images\sit.jpg" />
+    <None Remove="Images\sleep.jpg" />
+    <None Remove="Images\Smiley-Green.png" />
+    <None Remove="Images\Smiley-Red.png" />
+    <None Remove="Images\speaker.jpg" />
+    <None Remove="Images\speakerClearBackground.png" />
+    <None Remove="Images\train.jpg" />
+    <None Remove="Images\tree.jpg" />
+    <None Remove="SightWords.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\apple.jpg" />
+    <EmbeddedResource Include="Images\baby.jpg" />
+    <EmbeddedResource Include="Images\ball.jpg" />
+    <EmbeddedResource Include="Images\bath.jpg" />
+    <EmbeddedResource Include="Images\bed.jpg" />
+    <EmbeddedResource Include="Images\book.jpg" />
+    <EmbeddedResource Include="Images\bubbles.jpg" />
+    <EmbeddedResource Include="Images\car.jpg" />
+    <EmbeddedResource Include="Images\cat.jpg" />
+    <EmbeddedResource Include="Images\climb.jpg" />
+    <EmbeddedResource Include="Images\cookie.jpg" />
+    <EmbeddedResource Include="Images\dog.jpg" />
+    <EmbeddedResource Include="Images\eat.jpg" />
+    <EmbeddedResource Include="Images\juice.jpg" />
+    <EmbeddedResource Include="Images\jump.jpg" />
+    <EmbeddedResource Include="Images\milk.jpg" />
+    <EmbeddedResource Include="Images\run.jpg" />
+    <EmbeddedResource Include="Images\SeeSaySignMonkey.PNG" />
+    <EmbeddedResource Include="Images\shoe.jpg" />
+    <EmbeddedResource Include="Images\sit.jpg" />
+    <EmbeddedResource Include="Images\sleep.jpg" />
+    <EmbeddedResource Include="Images\Smiley-Green.png" />
+    <EmbeddedResource Include="Images\Smiley-Red.png" />
+    <EmbeddedResource Include="Images\speakerClearBackground.png" />
+    <EmbeddedResource Include="Images\train.jpg" />
+    <EmbeddedResource Include="Images\tree.jpg" />
+    <EmbeddedResource Include="SightWords.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SaySign\MasterTabbedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SaySign\RecordMode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SaySign\SaySignModePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SaySign\VideoMode.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="See\GameModeWordListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="See\SeeModePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="See\SeeStage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="See\SeeStageGame.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="See\WordListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="SaySign\SaySignModePage.xaml.cs">
+      <DependentUpon>SaySignModePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="See\SeeModePage.xaml.cs">
+      <DependentUpon>SeeModePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="See\SeeStageGame.xaml.cs">
+      <DependentUpon>SeeStageGame.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Videos\" />
+  </ItemGroup>
+</Project>

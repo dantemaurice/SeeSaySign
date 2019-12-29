@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:formsVideoLibrary="clr-namespace:SeeSaySign.FormsVideoLibrary;assembly=SeeSaySign"
+             x:Class="SeeSaySign.SaySign.RecordMode"
+             >
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Style="{DynamicResource TitleLabel}"
+                   x:Name="TitleLabel"
+                   FontSize="20"
+                   HeightRequest="50"
+                   Grid.Row = "0"
+                   Margin="5"
+            />
+            <Label Style="{DynamicResource DirectionLabel}"
+                   x:Name="WordLabel"
+                   FontSize="20"
+                   TextColor="{StaticResource LTPurple}"
+                   Grid.Row = "1"
+                   Margin="5"
+                   VerticalTextAlignment="Start"
+            />
+            <formsVideoLibrary:VideoPlayer 
+                x:Name="Video"  
+                IsVisible="True" 
+                AutoPlay="False"
+                VerticalOptions="EndAndExpand"
+                Grid.Row = "2"
+                Grid.RowSpan = "5"
+            />
+            <Button x:Name="takeVideo" 
+	                Text="Take New Video"
+                    Style="{DynamicResource SecondButton}"
+                    VerticalOptions="EndAndExpand"
+                    Grid.Row = "7"
+                    Margin="0"
+	                />
+          
+          
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

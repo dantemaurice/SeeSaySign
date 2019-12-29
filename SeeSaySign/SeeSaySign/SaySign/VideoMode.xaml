@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Video="clr-namespace:SeeSaySign.FormsVideoLibrary"
+             x:Class="SeeSaySign.SaySign.VideoMode">
+    <ContentPage.Content>
+            <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Style="{DynamicResource TitleLabel}"
+                   x:Name="TitleLabel"
+                   FontSize="20"
+                   HeightRequest="50"
+                   Grid.Row = "0"
+                   Margin="5"
+            />
+            <Label Style="{DynamicResource DirectionLabel}"
+                   x:Name="WordLabel"
+                   FontSize="20"
+                   TextColor="{StaticResource LTPurple}"
+                   Grid.Row = "1"
+                   Margin="5"
+                   VerticalTextAlignment="Start"
+            />
+            <Video:VideoPlayer 
+                x:Name="Video"  
+                IsVisible="True" 
+                VerticalOptions="EndAndExpand"
+                Grid.Row = "2"
+                Grid.RowSpan = "5"
+                AutoPlay="False"
+            />
+          
+          
+          
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeeSaySign.See.SeeModePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource BgColor}">
+            <Label Style="{DynamicResource TitleLabel}"
+                   Text="SEE!"
+                   />
+            <StackLayout>
+                <Button x:Name="Stage1"
+                       Style="{DynamicResource FirstButton}"
+                        Text="Stage 1: Touch the Picture!"
+                        Clicked="Stage_Selected"
+                        
+                        />
+                <Button x:Name="Stage2"
+                        Style="{DynamicResource SecondButton}"
+                        Text="Stage 2: Find the Picture!"
+                        Clicked="Stage_Selected"
+                />
+                <Button x:Name="Stage3"
+                        Style="{DynamicResource ThirdButton}"
+                        Text="Stage 3: What Does it Do?"
+                        Clicked="Stage_Selected"
+                        
+                />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

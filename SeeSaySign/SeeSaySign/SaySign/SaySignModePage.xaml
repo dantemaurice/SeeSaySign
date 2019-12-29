@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SeeSaySign.SaySign.SaySignModePage">
+    <ContentPage.Content>
+		<StackLayout BackgroundColor="{StaticResource BgColor}">
+			<Label Style="{DynamicResource TitleLabel}"
+			       Text="SEE!"
+                   x:Name="TitleLabel"
+			/>
+			<StackLayout>
+				<Button x:Name="Stage1"
+				        Style="{DynamicResource FirstButton}"
+				        Text="Stage 1: Hear the Word!"
+				        Clicked="Stage_Selected"
+                        
+                        
+				/>
+				<Button x:Name="Stage2"
+				        Style="{DynamicResource SecondButton}"
+				        Text="Stage 2: Say the Word!"
+				        Clicked="Stage_Selected"
+				/>
+				
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

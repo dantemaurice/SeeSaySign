@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SeeSaySign.Controls;assembly=SeeSaySign"
+             x:Class="SeeSaySign.HomePage">
+    <ContentPage.Content>
+       
+            <StackLayout BackgroundColor="{StaticResource BgColor}">
+            <Image Source="{controls:ImageResource SeeSaySign.Images.SeeSaySignMonkey.PNG}"
+                   WidthRequest="250"
+                   HeightRequest="350"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="15"
+                   
+                   />
+            <Label
+                Style="{DynamicResource DirectionLabel}"
+                Text="Welcome to See! Say! Sign! Please select an learning mode. "
+                Margin="5"
+                />
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         >
+                <Button x:Name="SeeButton" 
+                        Style="{DynamicResource FirstButton}"
+                        Text="SEE!"
+                        Clicked="SeeButton_OnClicked"
+                />
+                <Button x:Name="SayButton" 
+                        Style="{DynamicResource SecondButton}"
+                        Text="SAY!"
+                        Clicked="SayButton_OnClicked"
+                />
+                <Button x:Name="SignButton"
+                        Style="{DynamicResource ThirdButton}"
+                        Text="SIGN!"
+                        Clicked="SignButton_OnClicked"
+                />
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

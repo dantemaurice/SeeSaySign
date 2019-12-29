@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:SeeSaySign.Controls;assembly=SeeSaySign"
+
+             x:Class="SeeSaySign.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <controls:EmbeddedImageConverter x:Key="irConverter" 
+                                        ResolvingAssemblyType="{x:Type controls:SightWord}" />
+            <!--#region Colorlibary-->
+            <Color x:Key="LTOrange">#F69021</Color>
+            <Color x:Key="LTPurple">#442165</Color>
+            <Color x:Key="LTWhite">#FFFFFF</Color>
+            <Color x:Key="BgColor" >#FAFAFA</Color>
+            <!--#endregion-->
+
+            <!--#region Label-->
+            <Style TargetType="Label" x:Key="TitleLabel">
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="TextColor" Value="{DynamicResource LTOrange}"/>
+                <Setter Property="Margin" Value="25,75,25,25"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+
+            </Style>
+            <Style TargetType="Label" x:Key="DirectionLabel">
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="25,25,25,25"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextColor" Value="{StaticResource LTPurple}"/>
+            </Style>
+            <!--#endregion-->
+
+            <!--#region Button-->
+            <Style TargetType="Button" x:Key="AllButton">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="Margin" Value="10"/>
+              <Setter Property="WidthRequest" Value="250"/>
+              <Setter Property="CornerRadius" Value="10"/>
+
+                
+            </Style>
+            <Style TargetType="Button" x:Key="FirstButton" BaseResourceKey="AllButton">
+                <Setter Property="TextColor" Value="{StaticResource LTWhite}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource LTPurple}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="SecondButton" BaseResourceKey="AllButton">
+                <Setter Property="TextColor" Value="{StaticResource LTWhite}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource LTOrange}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="ThirdButton" BaseResourceKey="AllButton">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource LTWhite}"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="BorderColor" Value="Black"/>
+            </Style>
+            <Style TargetType="ImageButton" x:Key="SeeStage2Button" >
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BorderWidth" Value="5"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource BgColor}"/>
+                <Setter Property="BorderColor" Value="White"/>
+            </Style>
+            <!--#endregion-->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
